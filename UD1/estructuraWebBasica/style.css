@@ -1,0 +1,50 @@
+header,
+section,
+nav,
+aside,
+footer {
+  background-color: #cd5c5c;
+}
+
+section header,
+section article,
+section footer {
+  background-color: #bdb76b;
+}
+
+body {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 1em;
+  text-align: center;
+}
+
+#mainHeader {
+  grid-column: 1/5;
+  grid-row: 1/2;
+}
+
+nav {
+  grid-column: 1/2;
+  grid-row: 2/11;
+}
+
+section {
+  grid-column: 2/4;
+}
+
+aside {
+  grid-column: 4/5;
+}
+
+main {
+  grid-column: 1/5;
+  display: grid;
+}
+
+#mainFooter {
+  grid-column: 1/5;
+  grid-row: 12/12;
+}
