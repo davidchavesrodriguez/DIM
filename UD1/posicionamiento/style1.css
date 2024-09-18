@@ -1,0 +1,75 @@
+/* --- Float --- */
+/* #ex1 {
+    height: 600px;
+    border: 3px solid black;
+    border-style: dotted;
+  }
+
+#blueDiv {
+  background-color: blue;
+  height: 100%;
+  width: 33.33%;
+  float: left;
+}
+
+#whiteDiv {
+  height: 100%;
+  width: 33.33%;
+  float: left;
+}
+
+#redDiv {
+  background-color: red;
+  height: 100%;
+  width: 33.33%;
+  float: left;
+} */
+
+/* --- Flexbox --- */
+/* #ex1 {
+  height: 600px;
+  border: 3px solid black;
+  border-style: dotted;
+  display: flex;
+  flex-direction: row;
+}
+
+#blueDiv {
+  background-color: blue;
+  height: 100%;
+  width: 33.33%;
+}
+
+#whiteDiv {
+  height: 100%;
+  width: 33.33%;
+}
+
+#redDiv {
+  background-color: red;
+  height: 100%;
+  width: 33.33%;
+} */
+
+/* --- Grid --- */
+/* #ex1 {
+  height: 600px;
+  border: 3px solid black;
+  border-style: dotted;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#blueDiv {
+  background-color: blue;
+  height: 100%;
+}
+
+#whiteDiv {
+  height: 100%;
+}
+
+#redDiv {
+  background-color: red;
+  height: 100%;
+} */
