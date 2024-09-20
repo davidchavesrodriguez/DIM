@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ed280e2-0eb6-4957-949e-18849788ca27" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DIM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DIM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UD1/estructuraWebBasica/EstructuraWebBasica/src/main/java/org/example/EstructuraWebBasica.java" beforeDir="false" afterPath="$PROJECT_DIR$/UD1/estructuraWebBasica/EstructuraWebBasica/src/main/java/org/example/EstructuraWebBasica.java" afterDir="false" />
-    </list>
+    <list default="true" id="2ed280e2-0eb6-4957-949e-18849788ca27" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/sanclemente.local/a22davidcr/Escritorio/DIM",
+    "last_opened_file_path": "/opt/android/projectsUnlocked/PMDM/UD01_2_AnimalList",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",

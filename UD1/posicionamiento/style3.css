@@ -1,0 +1,47 @@
+body {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+div:not(.mainDiv) {
+  height: 100%;
+  width: fit-content;
+  margin: 1%;
+}
+
+.mainDiv {
+  height: 50vh;
+  border: 2px solid black;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.purple {
+  background-color: #8a2be2;
+}
+
+/* --- Float --- */
+
+/* --- Flexbox --- */
+#ex3Flex {
+  display: flex;
+}
+
+#leftFlex,
+#rightFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Grid --- */

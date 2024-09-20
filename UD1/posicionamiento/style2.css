@@ -1,0 +1,51 @@
+body {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.mainDiv {
+  height: 20vh;
+  border: 3px solid #8c0303;
+  border-style: dotted;
+  padding: 3%;
+}
+
+.mainDiv div {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.mainDiv div:not(#ex2Grid div) {
+  width: 50%;
+}
+
+.yellow {
+  background-color: #f0e68c;
+  border: 2px solid #2f4f4f;
+}
+
+.blue {
+  background-color: #e0ffff;
+  border: 2px solid #cd5c5c;
+}
+
+/* --- Float --- */
+#yellowFloat {
+  float: left;
+}
+
+#blueFloat {
+  float: right;
+}
+
+/* --- Flexbox --- */
+#ex2Flex {
+  display: flex;
+}
+
+/* --- Grid --- */
+#ex2Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
