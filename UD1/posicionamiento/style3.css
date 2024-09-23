@@ -6,7 +6,7 @@ body {
 
 div:not(.mainDiv) {
   height: 100%;
-  width: fit-content;
+  /* width: fit-content; */
   margin: 1%;
 }
 

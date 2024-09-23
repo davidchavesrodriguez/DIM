@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.mainDiv {
+  height: 10vh;
+  border: 2px dotted black;
+}
+
+.mainDiv div {
+  box-sizing: border-box;
+  height: 50%;
+}
+
+.orange {
+  background-color: #ff7f50;
+}
+
+.blue {
+  background-color: #6495ed;
+}
