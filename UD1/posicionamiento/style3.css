@@ -1,18 +1,17 @@
 body {
   text-align: center;
-  width: 75%;
+  width: 750px;
   margin: 0 auto;
-}
-
-div:not(.mainDiv) {
-  height: 100%;
-  /* width: fit-content; */
-  margin: 1%;
 }
 
 .mainDiv {
   height: 50vh;
   border: 2px solid black;
+}
+
+div:not(.mainDiv):not(#ex3Flex div) {
+  box-sizing: border-box;
+  margin: 1%;
 }
 
 .green {
@@ -32,6 +31,29 @@ div:not(.mainDiv) {
 }
 
 /* --- Float --- */
+#greenFloat {
+  float: left;
+  height: 47%;
+  width: 46%;
+}
+
+#redFloat {
+  float: left;
+  height: 47%;
+  width: 46%;
+}
+
+#blueFloat {
+  float: right;
+  height: 24%;
+  width: 46%;
+}
+
+#purpleFloat {
+  float: right;
+  height: 70%;
+  width: 46%;
+}
 
 /* --- Flexbox --- */
 #ex3Flex {
@@ -42,6 +64,53 @@ div:not(.mainDiv) {
 #rightFlex {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+#redFlex,
+#greenFlex,
+#blueFlex,
+#purpleFlex {
+  margin: 2%;
+}
+
+#redFlex,
+#greenFlex {
+  height: 96%;
+}
+
+#blueFlex {
+  height: 23%;
+}
+
+#purpleFlex {
+  height: 73%;
 }
 
 /* --- Grid --- */
+#ex3Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1%;
+}
+
+#greenGrid {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+#redGrid {
+  grid-column: 1;
+  grid-row: 4 / span 3;
+}
+
+#purpleGrid {
+  grid-column: 2;
+  grid-row: 3 / span 4;
+}
+
+#blueGrid {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}

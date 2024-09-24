@@ -5,21 +5,42 @@ body {
 }
 
 .mainDiv {
-  box-sizing: border-box;
   height: 40vh;
   border: 2px dotted black;
   padding: 1%;
 }
 
-.mainDiv div {
-  box-sizing: border-box;
+.mainDiv div:not(#ex4Grid div) {
   height: 47%;
 }
 
 .orange {
   background-color: #ff7f50;
+  margin-bottom: 1%;
 }
 
 .blue {
   background-color: #6495ed;
+  margin-top: 1%;
+}
+
+/* --- Float --- */
+#orangeFloat {
+  float: initial;
+}
+
+#blueFloat {
+  float: none;
+}
+
+/* --- Flexbox --- */
+#ex4Flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Grid --- */
+#ex4Grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
 }
