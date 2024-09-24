@@ -5,13 +5,15 @@ body {
 }
 
 .mainDiv {
-  height: 10vh;
+  box-sizing: border-box;
+  height: 40vh;
   border: 2px dotted black;
+  padding: 1%;
 }
 
 .mainDiv div {
   box-sizing: border-box;
-  height: 50%;
+  height: 47%;
 }
 
 .orange {
