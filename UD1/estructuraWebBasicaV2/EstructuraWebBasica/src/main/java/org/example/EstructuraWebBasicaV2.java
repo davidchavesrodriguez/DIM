@@ -13,15 +13,15 @@ public class EstructuraWebBasicaV2 {
         jframe.setLayout(new BorderLayout());
 
         JPanel mainHeader = new JPanel();
+        mainHeader.setLayout(new BorderLayout());
         mainHeader.setPreferredSize(new Dimension(200, 60));
         mainHeader.setBackground(Color.decode("#cd5c5c"));
-        JLabel headerLabel = new JLabel("cabeceira");
+        JLabel headerLabel = new JLabel("cabeceira", JLabel.CENTER);
         headerLabel.setForeground(Color.WHITE);
-        // FIXME: NON VAI A LABEL
         mainHeader.add(headerLabel, BorderLayout.CENTER);
         mainHeader.setBorder(BorderFactory.createMatteBorder(0, 0, 10, 0, Color.white));
-        mainHeader.setLayout(new BorderLayout());
         jframe.add(mainHeader, BorderLayout.NORTH);
+
 
         JPanel mainFooter = new JPanel();
         mainFooter.setBackground(Color.decode("#cd5c5c"));
