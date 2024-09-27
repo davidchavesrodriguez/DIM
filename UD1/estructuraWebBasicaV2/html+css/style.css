@@ -1,0 +1,79 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  color: white;
+  text-align: center;
+  font-size: x-large;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header,
+footer {
+  padding: 20px;
+}
+
+/* Estilos de main */
+#mainHeader,
+#mainFooter {
+  background-color: #cd5c5c;
+  margin-bottom: 1%;
+}
+
+#mainFooter {
+  margin-top: 1%;
+  margin-bottom: 0;
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+main nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section {
+  flex: 2;
+  display: grid;
+  grid-template-rows: 2fr 4fr 3fr;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+main nav,
+main section,
+main aside {
+  background-color: #cd5c5c;
+}
+
+article {
+  background-color: #7abcde;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article:first-of-type {
+  margin-top: 3%;
+}
+
+article:last-of-type {
+  margin-bottom: 5%;
+}
