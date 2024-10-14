@@ -1,3 +1,4 @@
+/* --- Figure and Image Styling --- */
 figure {
   display: flex;
   flex-direction: column;
@@ -5,13 +6,238 @@ figure {
   align-items: center;
 }
 
-main {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 20px;
-}
-
 figure img {
   height: 200px;
   width: 200px;
+}
+
+figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+figcaption div:hover {
+  cursor: default;
+}
+
+/* --- Price Button --- */
+.price {
+  background-color: #ffe600;
+  color: #212529;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 80%;
+  text-align: center;
+}
+
+/* --- Button Hover States --- */
+figcaption button:hover {
+  background-color: #ffe600;
+  color: #fff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.details-button,
+.cart-button {
+  background-color: #efede8;
+  color: #212529;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 45%;
+  border-radius: 30px;
+}
+
+/* --- Layout and Flexbox --- */
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+aside {
+  width: 25%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rightContent {
+  width: 75%;
+  padding: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+nav#contentNav {
+  background-color: #efede8;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+nav#contentNav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav#contentNav li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav#contentNav a {
+  text-decoration: none;
+  color: #212529;
+  font-weight: bold;
+}
+
+/* --- Pagination --- */
+.paginacion {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.paginacion ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.paginacion li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.paginacion a {
+  text-decoration: none;
+  color: #212529;
+  border: 1px solid #212529;
+  padding: 5px 10px;
+}
+
+.paginacion a.active {
+  background-color: #896206;
+  color: white;
+}
+
+.paginacion a:hover {
+  background-color: #896206;
+  color: white;
+}
+
+/* --- Footer Styles --- */
+.footer {
+  color: #fff;
+  background-color: #212529;
+  padding: 20px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer-menu {
+  text-align: center;
+}
+
+.footer-menu * {
+  color: #ffe600;
+  margin-top: 10%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex-basis: 24%;
+}
+
+.footer-subscription {
+  margin-top: 5%;
+}
+
+.footer-form input[type="text"],
+.footer-form input[type="email"] {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.footer-form button {
+  padding: 5px;
+  background-color: #ffe600;
+}
+
+#copyright {
+  color: #ffe600;
+  text-align: center;
+}
+
+/* --- General Body Styles --- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+header nav ul li {
+  margin-left: 50%;
+}
+
+h4 {
+  margin-top: 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+  }
+  .rightContent {
+    width: 100%;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-section {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
 }
