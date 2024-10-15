@@ -1,3 +1,43 @@
+/* --- General Body Styles --- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+}
+
+header {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212529;
+  color: #ffe600;
+}
+
+.logoDiv {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: #ffe600;
+}
+
 /* --- Figure and Image Styling --- */
 figure {
   display: flex;
@@ -69,10 +109,18 @@ figcaption button:hover {
 }
 
 aside {
-  width: 25%;
-  padding: 20px;
+  width: 20%;
+  padding: 1%;
   background-color: #f4f4f4;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+aside ul {
+}
+
+aside li {
+  display: flex;
+  justify-content: space-between;
 }
 
 .rightContent {
@@ -156,27 +204,26 @@ nav#contentNav a {
   color: #fff;
 }
 
+.footer a:hover {
+  color: #ffe600;
+}
+
 .footer-menu {
   text-align: center;
 }
 
 .footer-menu * {
   color: #ffe600;
-  margin-top: 10%;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .footer-section {
   flex-basis: 24%;
-}
-
-.footer-subscription {
-  margin-top: 5%;
 }
 
 .footer-form input[type="text"],
@@ -193,51 +240,4 @@ nav#contentNav a {
 #copyright {
   color: #ffe600;
   text-align: center;
-}
-
-/* --- General Body Styles --- */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  margin: 0;
-}
-
-header {
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-}
-
-header nav ul {
-  display: flex;
-  flex-direction: row;
-}
-
-header nav ul li {
-  margin-left: 50%;
-}
-
-h4 {
-  margin-top: 0;
-}
-
-/* --- Responsive Adjustments --- */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  aside {
-    width: 100%;
-  }
-  .rightContent {
-    width: 100%;
-  }
-  .footer-container {
-    flex-direction: column;
-  }
-  .footer-section {
-    flex-basis: 100%;
-    margin-bottom: 20px;
-  }
 }
