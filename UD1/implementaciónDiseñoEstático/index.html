@@ -59,9 +59,48 @@
       <div class="rightContent">
         <nav id="contentNav">
           <ul>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#nuestra-historia">Nuestra historia</a></li>
-            <li><a href="#contacto">Contáctanos!</a></li>
+            <li>
+              <textarea
+                name="find"
+                id="find"
+                placeholder="Busca por nombre: "
+              ></textarea>
+            </li>
+            <li>
+              <label for="beer">Escoge por tipo:</label>
+              <select name="beer" id="beer">
+                <optgroup label="Fermentación Alta (Ales)">
+                  <option value="pale-ale">Pale Ale</option>
+                  <option value="ipa">IPA</option>
+                  <option value="stout">Stout</option>
+                  <option value="porter">Porter</option>
+                </optgroup>
+                <optgroup label="Fermentación Baja (Lagers)">
+                  <option value="pilsner">Pilsner</option>
+                  <option value="helles">Helles</option>
+                  <option value="vienna-lager">Vienna Lager</option>
+                  <option value="bock">Bock</option>
+                </optgroup>
+                <optgroup label="Por Color">
+                  <option value="blonde">Blonde</option>
+                  <option value="amber">Amber</option>
+                  <option value="brown">Brown</option>
+                  <option value="dark">Dark</option>
+                </optgroup>
+                <optgroup label="Por Estilo">
+                  <option value="belgian-ale">Belgian Ale</option>
+                  <option value="wheat-beer">Wheat Beer</option>
+                  <option value="saison">Saison</option>
+                  <option value="sour">Sour</option>
+                </optgroup>
+                <optgroup label="Por Contenido de Alcohol">
+                  <option value="low-abv">Bajo (<4% ABV)</option>
+                  <option value="medium-abv">Medio (4-6% ABV)</option>
+                  <option value="high-abv">Alto (>6% ABV)</option>
+                </optgroup>
+              </select>
+            </li>
+            <li><button type="submit">Submit</button></li>
           </ul>
         </nav>
         <main>
