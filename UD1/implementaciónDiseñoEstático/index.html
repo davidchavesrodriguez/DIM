@@ -14,7 +14,7 @@
           src="recursos/logoTextoTransparente.webp"
           alt="Logo Cheer Beers!"
         />
-        <h2>Cheer Beers!</h2>
+        <!-- <h2>Cheer Beers!</h2> -->
       </div>
       <nav id="mainNav">
         <ul>
@@ -58,17 +58,18 @@
 
       <div class="rightContent">
         <nav id="contentNav">
-          <ul>
-            <li>
-              <textarea
-                name="find"
-                id="find"
-                placeholder="Busca por nombre: "
-              ></textarea>
-            </li>
-            <li>
-              <label for="beer">Escoge por tipo:</label>
+          <form action="">
+            <div>
+              <!-- <label for="find">Busca por nombre:</label> -->
+              <input name="find" id="find" placeholder="Buscar: " type="text" />
+            </div>
+
+            <div>
+              <!-- <label for="beer">Escoge por tipo:</label> -->
               <select name="beer" id="beer">
+                <option value="" disabled selected>
+                  Selecciona un tipo de cerveza...
+                </option>
                 <optgroup label="Fermentación Alta (Ales)">
                   <option value="pale-ale">Pale Ale</option>
                   <option value="ipa">IPA</option>
@@ -94,15 +95,17 @@
                   <option value="sour">Sour</option>
                 </optgroup>
                 <optgroup label="Por Contenido de Alcohol">
-                  <option value="low-abv">Bajo (<4% ABV)</option>
+                  <option value="low-abv">Bajo (&lt;4% ABV)</option>
                   <option value="medium-abv">Medio (4-6% ABV)</option>
-                  <option value="high-abv">Alto (>6% ABV)</option>
+                  <option value="high-abv">Alto (&gt;6% ABV)</option>
                 </optgroup>
               </select>
-            </li>
-            <li><button type="submit">Submit</button></li>
-          </ul>
+            </div>
+
+            <button type="submit">Encuentra la buena ;)</button>
+          </form>
         </nav>
+
         <main>
           <!-- Cerveza Estrella Galicia -->
           <article>

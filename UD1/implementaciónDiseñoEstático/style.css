@@ -5,13 +5,14 @@ body {
   margin: 0;
 }
 
+/* --- Header Styles --- */
 header {
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #212529;
-  color: #ffe600;
+  color: #ffc100;
 }
 
 .logoDiv {
@@ -22,7 +23,6 @@ header {
 
 header nav ul {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
   padding: 0;
@@ -35,7 +35,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #ffe600;
+  color: #ffc100;
 }
 
 /* --- Figure and Image Styling --- */
@@ -45,19 +45,25 @@ figure {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  border: 2px solid #896206;
   border-radius: 10%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 figure:hover {
-  box-shadow: 5px 5px 1px #ffe600;
-  transform: scale(1.1);
-  cursor: pointer;
+  box-shadow: 10px 10px rgba(255, 193, 0, 0.7);
+  transform: scale(1.05);
+  border-style: double;
+  border: 2px;
 }
 
 figure img {
   height: 200px;
   width: 200px;
+  transition: transform 0.3s ease;
+}
+
+figure:hover img {
+  transform: scale(1.1);
 }
 
 figcaption {
@@ -68,13 +74,9 @@ figcaption {
   font-family: Arial, sans-serif;
 }
 
-figcaption div:hover {
-  cursor: default;
-}
-
-/* --- Price Button --- */
+/* --- Price Button Styles --- */
 .price {
-  background-color: #ffe600;
+  background-color: #ffc100;
   color: #212529;
   border: none;
   padding: 10px;
@@ -88,10 +90,11 @@ figcaption div:hover {
 
 /* --- Button Hover States --- */
 figcaption button:hover {
-  background-color: #ffe600;
+  background-color: #ffc100;
   color: #212529;
 }
 
+/* --- Button Container --- */
 .button-container {
   display: flex;
   justify-content: space-between;
@@ -115,18 +118,61 @@ figcaption button:hover {
   display: flex;
   flex-direction: row;
   margin: 20px;
+  align-items: center;
 }
 
 aside {
-  width: 20%;
-  padding: 1%;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  margin-right: 20px;
 }
 
-aside li {
+aside h4 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid #ffc100;
+  padding-bottom: 10px;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+
+aside ul li:hover {
+  background-color: #ffebcc;
+  border: 2px solid #ffc100;
+}
+
+aside ul li p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+aside ul li p:last-child {
+  font-size: 1.5rem;
+  color: #ffc100;
 }
 
 .rightContent {
@@ -134,35 +180,81 @@ aside li {
   padding: 20px;
 }
 
+/* --- Main Content Styles --- */
 main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* --- Navigation Content Styling --- */
 nav#contentNav {
-  background-color: #efede8;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  padding: 10px;
   text-align: center;
 }
 
 nav#contentNav ul {
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-nav#contentNav li {
-  display: inline;
-  margin: 0 10px;
+nav#contentNav input,
+nav#contentNav select {
+  padding: 10px;
+  /* border-radius: 55px; */
+  border: none;
+  border-bottom: 2px solid #ffc100;
+  background-color: #f8f9fa;
+  font-family: inherit;
+  transition: border-color 0.3s;
+  outline: none;
 }
 
-nav#contentNav a {
-  text-decoration: none;
+nav#contentNav input:focus,
+nav#contentNav select:focus {
+  border-color: #212529;
+  outline: none;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav#contentNav button {
+  background-color: #ffc100;
+  padding: 1em;
   color: #212529;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
   font-weight: bold;
+  font-size: medium;
+  transition: background-color 0.3s;
 }
 
-/* --- Pagination --- */
+nav#contentNav button:hover {
+  background-color: #ffc100;
+}
+
+nav#contentNav button:active {
+  background-color: #ffc100;
+}
+
+/* --- Label Styles --- */
+label {
+  display: block;
+  text-align: center;
+}
+
+/* --- Pagination Styles --- */
 .paginacion {
   text-align: center;
   margin: 20px 0;
@@ -211,7 +303,7 @@ nav#contentNav a {
 }
 
 .footer a:hover {
-  color: #ffe600;
+  color: #ffc100;
 }
 
 .footer-menu {
@@ -219,7 +311,7 @@ nav#contentNav a {
 }
 
 .footer-menu * {
-  color: #ffe600;
+  color: #ffc100;
 }
 
 .footer-container {
@@ -240,21 +332,10 @@ nav#contentNav a {
 
 .footer-form button {
   padding: 5px;
-  background-color: #ffe600;
+  background-color: #ffc100;
 }
 
 #copyright {
-  color: #ffe600;
+  color: #ffc100;
   text-align: center;
-}
-
-textarea {
-  resize: none;
-}
-
-#contentNav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
 }
