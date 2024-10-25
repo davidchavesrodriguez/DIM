@@ -1,0 +1,50 @@
+:root {
+  --main-color: #235bb5;
+  --accent-color: #d9a626;
+}
+
+body {
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  background-color: var(--main-color);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+#logo {
+  grid-column: 1;
+}
+
+#headerNav {
+  grid-column: 3/6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  height: 15vh;
+}
+
+#headerNav a {
+  color: var(--accent-color);
+  font-weight: bolder;
+}
+
+/* MAIN CONTENT */
+#mainPrincipal {
+  height: 75vh;
+}
+
+#mainPrincipal video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+  height: 10vh;
+  background-color: var(--main-color);
+}
