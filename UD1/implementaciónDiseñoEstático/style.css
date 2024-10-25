@@ -1,41 +1,88 @@
 /* --- General Body Styles --- */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: #efede8;
   margin: 0;
 }
 
 /* --- Header Styles --- */
 header {
-  padding: 10px 20px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #212529;
+  background: linear-gradient(135deg, #212529 0%, #2a2f36 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: #ffc100;
 }
 
+/* Logo */
 .logoDiv {
   display: flex;
-  text-align: center;
   align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
+/* Navigation */
 header nav ul {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
-  padding: 0;
-  margin: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 header nav ul li {
   margin: 0 20px;
+  position: relative; /* Para el efecto underline */
 }
 
 header nav ul li a {
   color: #ffc100;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  background: #ffc100;
+  transition: width 0.3s ease;
+  left: 0;
+  bottom: 0;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+header nav ul li a:hover {
+  color: #ffcc33;
+}
+
+/* --- Responsive Header --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
 }
 
 /* --- Figure and Image Styling --- */
@@ -44,9 +91,9 @@ figure {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
   border-radius: 10%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f8f9fa;
 }
 
 figure:hover {
@@ -54,6 +101,33 @@ figure:hover {
   transform: scale(1.05);
   border-style: double;
   border: 2px;
+  background-color: #ffc100;
+  transition: background-color 0.5s ease, color 1s ease;
+}
+
+figure h3 {
+  background-color: #212529;
+  padding: 3%;
+  border-radius: 100%;
+  color: #ffc100;
+  transition: background-color 1s ease, color 1s ease, padding 1s ease,
+    border-radius 1s ease;
+}
+
+figure:hover h3 {
+  background-color: #ffc100;
+  color: #212529;
+  padding: 10%;
+  border-radius: 0%;
+}
+
+figure .price {
+  transition: background-color 1s ease, color 1s ease;
+}
+
+figure:hover .price {
+  background-color: #212529;
+  color: #ffc100;
 }
 
 figure img {
@@ -71,7 +145,11 @@ figcaption {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  font-family: Arial, sans-serif;
+}
+
+figure .price,
+figure button {
+  font-weight: bold;
 }
 
 /* --- Price Button Styles --- */
@@ -118,7 +196,8 @@ figcaption button:hover {
   display: flex;
   flex-direction: row;
   margin: 20px;
-  align-items: center;
+  align-items: flex-start; /* Alinea los elementos al principio */
+  width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
 }
 
 aside {
@@ -126,8 +205,9 @@ aside {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 250px;
-  margin-right: 20px;
+  max-width: 250px; /* Tamaño máximo del aside */
+  flex-shrink: 0; /* Evita que el aside se encoja */
+  margin-right: 20px; /* Añade espacio entre aside y contenido */
 }
 
 aside h4 {
@@ -176,14 +256,34 @@ aside ul li p:last-child {
 }
 
 .rightContent {
-  width: 75%;
+  flex-grow: 1;
   padding: 20px;
+  margin-right: 10%;
 }
 
 /* --- Main Content Styles --- */
 main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1300px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #slogan {
+    display: none;
+    transition: display 3s ease;
+  }
+}
+
+@media (max-width: 865px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /* --- Navigation Content Styling --- */
@@ -196,36 +296,25 @@ nav#contentNav {
   text-align: center;
 }
 
-nav#contentNav ul {
+nav#contentNav form {
   list-style: none;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 nav#contentNav input,
 nav#contentNav select {
   padding: 10px;
-  /* border-radius: 55px; */
   border: none;
   border-bottom: 2px solid #ffc100;
   background-color: #f8f9fa;
   font-family: inherit;
   transition: border-color 0.3s;
   outline: none;
-}
-
-nav#contentNav input:focus,
-nav#contentNav select:focus {
-  border-color: #212529;
-  outline: none;
-}
-
-form {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
 nav#contentNav button {
@@ -240,12 +329,20 @@ nav#contentNav button {
   transition: background-color 0.3s;
 }
 
-nav#contentNav button:hover {
-  background-color: #ffc100;
-}
+/* --- Responsive Navigation Content --- */
+@media (max-width: 865px) {
+  nav#contentNav form {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-nav#contentNav button:active {
-  background-color: #ffc100;
+  nav#contentNav input,
+  nav#contentNav select,
+  nav#contentNav button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 /* --- Label Styles --- */
