@@ -12,6 +12,8 @@ header {
   background-color: var(--main-color);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  height: 20vh;
+  align-items: center;
 }
 
 #logo {
@@ -24,11 +26,12 @@ header {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
-  height: 15vh;
+  background-color: var(--accent-color);
+  height: 100%;
 }
 
 #headerNav a {
-  color: var(--accent-color);
+  color: var(--main-color);
   font-weight: bolder;
 }
 
