@@ -458,8 +458,8 @@ button[type="submit"] {
   width: 50%;
 }
 
-/* Sección de nuestra historia */
-.story-section {
+/* Sección de nuestra historia, valores y eventos */
+.section-common {
   text-align: center;
   width: 80%;
   margin: 20px auto;
@@ -470,22 +470,73 @@ button[type="submit"] {
   box-sizing: border-box;
 }
 
-.story-section h1 {
-  text-align: center;
+.section-common h2,
+.section-common h1 {
   color: #333;
+  text-align: center;
 }
 
-.story-section p {
+.section-common p {
   margin: 15px 0;
   color: #555;
   text-align: justify;
 }
 
-.story-section img {
+.section-common img {
   display: block;
   margin: 20px auto;
-  max-width: 100%;
+  max-width: 20em;
   border-radius: 8px;
+}
+
+/* Sección de nuestros valores */
+.our-values ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.our-values li {
+  margin: 10px 0;
+  text-align: left;
+  color: #444;
+}
+
+/* Sección de eventos */
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.event {
+  width: 45%;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.event h3 {
+  color: #444;
+}
+
+.event p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.event-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.event-link:hover {
+  background-color: #0056b3;
 }
 
 /* Estilos de la sección de contacto */
