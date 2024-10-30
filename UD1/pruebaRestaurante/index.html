@@ -14,24 +14,29 @@
         id="logo"
       />
       <nav id="headerNav">
-        <a href="">Carta</a>
-        <a href="">Conócenos</a>
-        <a href="">Contacto</a>
+        <p id="linkCarta">Carta</p>
+        <p id="linkConocenos">Conócenos</p>
+        <p id="linkContacto">Contacto</p>
       </nav>
     </header>
-    <main id="mainPrincipal">
-      <video autoplay muted loop id="scotlandVideo">
-        <source src="./images/scotland.mp4" type="video/mp4" />
-      </video>
+
+    <!-- MAIN PRINCIPAL -->
+    <main>
+      <iframe src="principal.html" title="principal" id="contentFrame"></iframe>
     </main>
 
-    <!--
-    <main id="mainCarta">
-      <img src="./images/logos/blueIcon.png" alt="" />
-      <iframe src="./carta.html" title="Carta"></iframe>
-    </main>
-    <main id="mainConocenos"></main>-->
-
-    <footer></footer>
+    <footer>
+      <p id="copyright">
+        &copy; 2024 Celtic Heritage. Todos los derechos reservados.
+      </p>
+      <hr />
+      <div>
+        <!-- :TODO -->
+        <p>Aviso Legal</p>
+        <p>Política de privacidad y cookies</p>
+        <p>Área Interna</p>
+      </div>
+    </footer>
+    <script src="scripts/index.js" defer></script>
   </body>
 </html>

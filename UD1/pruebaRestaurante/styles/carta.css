@@ -1,0 +1,12 @@
+.menu-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10%;
+}
+
+.product {
+  width: 45%;
+  border: 1px solid red;
+  margin: 1%;
+}
