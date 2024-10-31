@@ -1,12 +1,36 @@
+:root {
+  --main-color: #235bb5;
+  --accent-color: #d9a626;
+}
+
+body {
+  background-color: white;
+}
+
 .menu-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 10%;
+  border-bottom: 3px solid var(--accent-color);
 }
 
 .product {
-  width: 45%;
-  border: 1px solid red;
+  text-align: center;
+  width: 95%;
+  border: 3px solid var(--accent-color);
+  background-color: var(--main-color);
+  color: var(--accent-color);
   margin: 1%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+
+.product p {
+  margin: 2% 10%;
+}
+
+.price {
+  background-color: var(--accent-color);
+  color: var(--main-color);
 }

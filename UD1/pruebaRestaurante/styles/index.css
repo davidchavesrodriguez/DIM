@@ -16,15 +16,11 @@ body {
 
 /* HEADER */
 header {
-  background-color: var(--main-color);
+  background-color: var(--accent-color);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-<<<<<<< HEAD
-  height: 20vh;
+  height: 100%;
   align-items: center;
-=======
-  grid-row: 1/2;
->>>>>>> 97f852d07d2daa889ed057266b2411d2d08ff985
 }
 
 #logo {
@@ -38,17 +34,15 @@ header {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
-<<<<<<< HEAD
   background-color: var(--accent-color);
+  color: var(--main-color);
+  font-size: 1.5em;
+  font-weight: bold;
   height: 100%;
 }
 
 #headerNav a {
   color: var(--main-color);
-=======
-  font-size: 1.5em;
-  color: var(--accent-color);
->>>>>>> 97f852d07d2daa889ed057266b2411d2d08ff985
   font-weight: bolder;
 }
 
@@ -78,6 +72,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid var(--accent-color);
 }
 
 footer div {

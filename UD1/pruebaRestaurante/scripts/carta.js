@@ -1,7 +1,7 @@
 // Función para cargar el menú desde el archivo JSON
 async function loadMenu() {
   try {
-    const response = await fetch("menu.json"); // Asegúrate de que la ruta es correcta
+    const response = await fetch("menu.json");
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -23,7 +23,7 @@ async function loadMenu() {
             <h2>${item.name}</h2>
             <img src="${item.image}" alt="${item.name}" />
             <p>${item.description}</p>
-            <p>Precio: $${item.price.toFixed(2)}</p>
+            <p class="price">$${item.price.toFixed(2)}</p>
           `;
       appetizersSection.appendChild(appetizerDiv);
     });
@@ -43,7 +43,7 @@ async function loadMenu() {
             <h2>${item.name}</h2>
             <img src="${item.image}" alt="${item.name}" />
             <p>${item.description}</p>
-            <p>Precio: $${item.price.toFixed(2)}</p>
+            <p class="price">$${item.price.toFixed(2)}</p>
           `;
       mainSection.appendChild(mainDiv);
     });
@@ -63,7 +63,7 @@ async function loadMenu() {
             <h2>${item.name}</h2>
             <img src="${item.image}" alt="${item.name}" />
             <p>${item.description}</p>
-            <p>Precio: $${item.price.toFixed(2)}</p>
+            <p class="price">$${item.price.toFixed(2)}</p>
           `;
       dessertsSection.appendChild(dessertDiv);
     });
