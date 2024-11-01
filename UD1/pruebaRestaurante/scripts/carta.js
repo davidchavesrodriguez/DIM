@@ -76,3 +76,7 @@ async function loadMenu() {
 }
 
 loadMenu();
+
+document.getElementById("print-btn").addEventListener("click", () => {
+  window.print();
+});
