@@ -126,11 +126,45 @@ public class Elements {
     // Actividad 5: Uso de cuadros de diálogo (JOptionPane).
     // Crea una ventana con un botón que, al ser presionado, muestre un cuadro de diálogo pidiendo al usuario
     // que ingrese su edad. Luego, debe mostrar otro cuadro de diálogo con la edad ingresada.
+    public static void dialogWindow5() {
+        JFrame frame = new JFrame("Ejercicio 5");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 200);
+
+        JButton ageButton = new JButton("Pedir Edad");
+
+        ageButton.addActionListener(e -> {
+            String ageInput = JOptionPane.showInputDialog(frame, "Introduce tu edad:");
+            if (ageInput != null) {
+                JOptionPane.showMessageDialog(frame, "Tu edad es: " + ageInput);
+            }
+        });
+
+        frame.add(ageButton);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
 
 
     // Actividad 6: Menú desplegable (JComboBox).
     // Crea una interfaz que tenga un menú desplegable con opciones para elegir un color (por ejemplo: "Rojo", "Verde", "Azul").
     // Al seleccionar un color, muestra el color seleccionado en la consola.
+    public static void comboBoxWindow6() {
+        JFrame frame = new JFrame("Ejercicio 6");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 200);
+
+        JComboBox<String> colorComboBox = new JComboBox<>(new String[]{"Rojo", "Verde", "Azul"});
+        colorComboBox.addActionListener(e -> {
+            String selectedColor = Objects.requireNonNull(colorComboBox.getSelectedItem()).toString();
+            System.out.println("Color seleccionado: " + selectedColor);
+        });
+
+        frame.add(colorComboBox);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+
 
     // Actividad 7: Campo de contraseña (JPasswordField).
     // Crea una interfaz con un campo de texto para el nombre de usuario y un campo de contraseña.
@@ -157,6 +191,8 @@ public class Elements {
         buttonsWindow2();
         textFieldWindow3();
         fullNameWindow4();
+        dialogWindow5();
+        comboBoxWindow6();
     }
 }
 
