@@ -17,8 +17,6 @@ public class Elements {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         JButton boton = new JButton("Click");
-
-        // Event
         boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -31,6 +29,7 @@ public class Elements {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+
 
     // Actividad 2: Ventana con múltiples botones.
     // Crea una ventana que tenga dos botones: uno que diga "Aceptar" y otro que diga "Cancelar".
@@ -55,6 +54,7 @@ public class Elements {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+
 
     // Actividad 3: Interfaz con campos de texto.
     // Crea una ventana con un campo de texto donde el usuario pueda escribir su nombre y un botón.
@@ -85,6 +85,7 @@ public class Elements {
         frame.setVisible(true);
     }
 
+
     // Actividad 4: Uso de etiquetas y campos de texto.
     // Crea una interfaz que tenga dos campos de texto: uno para el nombre y otro para el apellido.
     // Al hacer clic en un botón "Enviar", debe mostrar un saludo personalizado en la consola con el nombre completo.
@@ -112,7 +113,6 @@ public class Elements {
             }
         });
 
-
         frame.add(nameLabel);
         frame.add(nameField);
         frame.add(lastnameLabel);
@@ -122,6 +122,7 @@ public class Elements {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+
 
     // Actividad 5: Uso de cuadros de diálogo (JOptionPane).
     // Crea una ventana con un botón que, al ser presionado, muestre un cuadro de diálogo pidiendo al usuario
@@ -185,7 +186,7 @@ public class Elements {
             String user = userField.getText().trim();
             String password = passwordField.getText().trim();
 
-            if (user.isEmpty() | password.isEmpty()) {
+            if (user.isEmpty() || password.isEmpty()) {
                 System.out.println("Cubre todos los campos");
             } else {
                 System.out.println("Usuario: " + user + ", Contraseña: " + password);
@@ -249,6 +250,7 @@ public class Elements {
         frame.setVisible(true);
     }
 
+
     // Actividad 9: Checkbox (JCheckBox).
     // Crea una interfaz con tres casillas de verificación (checkboxes) que representen opciones de toppings para una pizza:
     // "Queso Extra", "Pepperoni", y "Aceitunas".
@@ -288,6 +290,7 @@ public class Elements {
         frame.setVisible(true);
     }
 
+
     // Actividad 10: Menú de barra (JMenuBar y JMenu).
     // Crea una interfaz que tenga un menú en la barra superior con dos opciones: "Archivo" y "Edición".
     // En "Archivo", agrega un submenú "Abrir" y "Guardar".
@@ -320,6 +323,7 @@ public class Elements {
         frame.setVisible(true);
     }
 
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("Selector de Actividades");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -328,25 +332,23 @@ public class Elements {
         JComboBox<String> activityComboBox = getStringJComboBox();
         JButton executeButton = new JButton("Ejecutar Actividad");
 
-        executeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                int selectedIndex = activityComboBox.getSelectedIndex();
-                switch (selectedIndex) {
-                    case 0 -> basicWindow1();
-                    case 1 -> buttonsWindow2();
-                    case 2 -> textFieldWindow3();
-                    case 3 -> fullNameWindow4();
-                    case 4 -> dialogWindow5();
-                    case 5 -> comboBoxWindow6();
-                    case 6 -> passwordField7();
-                    case 7 -> radioWindow8();
-                    case 8 -> checkboxWindow9();
-                    case 9 -> menuBarWindow10();
-                    default -> System.out.println("Selecciona una actividad válida.");
-                }
+        executeButton.addActionListener(e -> {
+            int selectedIndex = activityComboBox.getSelectedIndex();
+            switch (selectedIndex) {
+                case 0 -> basicWindow1();
+                case 1 -> buttonsWindow2();
+                case 2 -> textFieldWindow3();
+                case 3 -> fullNameWindow4();
+                case 4 -> dialogWindow5();
+                case 5 -> comboBoxWindow6();
+                case 6 -> passwordField7();
+                case 7 -> radioWindow8();
+                case 8 -> checkboxWindow9();
+                case 9 -> menuBarWindow10();
+                default -> System.out.println("Selecciona una actividad válida.");
             }
         });
+
 
         frame.add(activityComboBox);
         frame.add(executeButton);
@@ -357,7 +359,7 @@ public class Elements {
     }
 
     private static JComboBox<String> getStringJComboBox() {
-        String[] activities = {
+        return new JComboBox<>(new String[]{
                 "Ejercicio 1: Ventana básica",
                 "Ejercicio 2: Múltiples botones",
                 "Ejercicio 3: Campos de texto",
@@ -368,10 +370,7 @@ public class Elements {
                 "Ejercicio 8: Radio buttons",
                 "Ejercicio 9: Checkbox",
                 "Ejercicio 10: Menú de barra"
-        };
-
-        JComboBox<String> activityComboBox = new JComboBox<>(activities);
-        return activityComboBox;
+        });
     }
 }
 
