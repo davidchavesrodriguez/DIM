@@ -3,6 +3,10 @@
   --accent-color: #d9a626;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   background: linear-gradient(to bottom right, #01112b, #03317a);
 }

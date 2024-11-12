@@ -21,10 +21,22 @@ async function loadMenu() {
       appetizerDiv.classList.add("product", "appetizer");
       appetizerDiv.innerHTML = `
             <h2>${item.name}</h2>
-            <img src="${item.image}" alt="${item.name}" />
-            <p>${item.description}</p>
+            <img class="menu-image" src="${item.image}" alt="${item.name}" />
+            <p class="menu-description">${item.description}</p>
             <p class="price">$${item.price.toFixed(2)}</p>
+            <div class="allergens hidden">
+              <strong>Alérgenos:</strong> ${item.allergens.join(", ")}
+            </div>
+            <div class="video hidden">
+              <iframe width="300" height="200" src="${
+                item.video_url
+              }" frameborder="0" allowfullscreen></iframe>
+            </div>
           `;
+      // Agregar el evento de clic en toda la tarjeta
+      appetizerDiv.addEventListener("click", () => {
+        toggleContent(appetizerDiv, item);
+      });
       appetizersSection.appendChild(appetizerDiv);
     });
     menuContainer.appendChild(appetizersSection);
@@ -41,10 +53,28 @@ async function loadMenu() {
       mainDiv.classList.add("product", "main");
       mainDiv.innerHTML = `
             <h2>${item.name}</h2>
-            <img src="${item.image}" alt="${item.name}" />
-            <p>${item.description}</p>
+            <img class="menu-image" src="${item.image}" alt="${item.name}" />
+            <p class="menu-description">${item.description}</p>
             <p class="price">$${item.price.toFixed(2)}</p>
+            <div class="allergens hidden">
+              <strong>Alérgenos:</strong> ${item.allergens.join(", ")}
+            </div>
+            <div class="video hidden">
+            <iframe width="300" height="200" 
+            src="${item.video_url}" 
+            title="YouTube video player" 
+            frameborder="0" allow="accelerometer; 
+            autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+            </iframe>
+            </div>
           `;
+      // Agregar el evento de clic en toda la tarjeta
+      mainDiv.addEventListener("click", () => {
+        toggleContent(mainDiv, item);
+      });
       mainSection.appendChild(mainDiv);
     });
     menuContainer.appendChild(mainSection);
@@ -61,10 +91,22 @@ async function loadMenu() {
       dessertDiv.classList.add("product", "dessert");
       dessertDiv.innerHTML = `
             <h2>${item.name}</h2>
-            <img src="${item.image}" alt="${item.name}" />
-            <p>${item.description}</p>
+            <img class="menu-image" src="${item.image}" alt="${item.name}" />
+            <p class="menu-description">${item.description}</p>
             <p class="price">$${item.price.toFixed(2)}</p>
+            <div class="allergens hidden">
+              <strong>Alérgenos:</strong> ${item.allergens.join(", ")}
+            </div>
+            <div class="video hidden">
+              <iframe width="300" height="200" src="${
+                item.video_url
+              }" frameborder="0" allowfullscreen></iframe>
+            </div>
           `;
+      // Agregar el evento de clic en toda la tarjeta
+      dessertDiv.addEventListener("click", () => {
+        toggleContent(dessertDiv, item);
+      });
       dessertsSection.appendChild(dessertDiv);
     });
     menuContainer.appendChild(dessertsSection);
@@ -72,6 +114,28 @@ async function loadMenu() {
     console.error("Error al cargar el menú:", error);
     const menuContainer = document.getElementById("menu");
     menuContainer.innerHTML = "<p>Hubo un error al cargar el menú.</p>";
+  }
+}
+
+// Función para alternar entre los contenidos: imagen y descripción por video y alérgenos
+function toggleContent(productDiv, item) {
+  const image = productDiv.querySelector(".menu-image");
+  const description = productDiv.querySelector(".menu-description");
+  const allergens = productDiv.querySelector(".allergens");
+  const video = productDiv.querySelector(".video");
+
+  if (image.classList.contains("hidden")) {
+    // Mostrar la imagen y la descripción
+    image.classList.remove("hidden");
+    description.classList.remove("hidden");
+    allergens.classList.add("hidden");
+    video.classList.add("hidden");
+  } else {
+    // Ocultar la imagen y la descripción, y mostrar alérgenos y video
+    image.classList.add("hidden");
+    description.classList.add("hidden");
+    allergens.classList.remove("hidden");
+    video.classList.remove("hidden");
   }
 }
 
