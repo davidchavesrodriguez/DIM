@@ -23,7 +23,6 @@ async function loadMenu() {
             <h2>${item.name}</h2>
             <img class="menu-image" src="${item.image}" alt="${item.name}" />
             <p class="menu-description">${item.description}</p>
-            <p class="price">$${item.price.toFixed(2)}</p>
             <div class="allergens hidden">
               <strong>Alérgenos:</strong> ${item.allergens.join(", ")}
             </div>
@@ -32,8 +31,8 @@ async function loadMenu() {
                 item.video_url
               }" frameborder="0" allowfullscreen></iframe>
             </div>
+            <p class="price">$${item.price.toFixed(2)}</p>
           `;
-      // Agregar el evento de clic en toda la tarjeta
       appetizerDiv.addEventListener("click", () => {
         toggleContent(appetizerDiv, item);
       });
@@ -55,7 +54,6 @@ async function loadMenu() {
             <h2>${item.name}</h2>
             <img class="menu-image" src="${item.image}" alt="${item.name}" />
             <p class="menu-description">${item.description}</p>
-            <p class="price">$${item.price.toFixed(2)}</p>
             <div class="allergens hidden">
               <strong>Alérgenos:</strong> ${item.allergens.join(", ")}
             </div>
@@ -70,8 +68,8 @@ async function loadMenu() {
             allowfullscreen>
             </iframe>
             </div>
+            <p class="price">$${item.price.toFixed(2)}</p>
           `;
-      // Agregar el evento de clic en toda la tarjeta
       mainDiv.addEventListener("click", () => {
         toggleContent(mainDiv, item);
       });
@@ -93,7 +91,6 @@ async function loadMenu() {
             <h2>${item.name}</h2>
             <img class="menu-image" src="${item.image}" alt="${item.name}" />
             <p class="menu-description">${item.description}</p>
-            <p class="price">$${item.price.toFixed(2)}</p>
             <div class="allergens hidden">
               <strong>Alérgenos:</strong> ${item.allergens.join(", ")}
             </div>
@@ -102,8 +99,8 @@ async function loadMenu() {
                 item.video_url
               }" frameborder="0" allowfullscreen></iframe>
             </div>
+            <p class="price">$${item.price.toFixed(2)}</p>
           `;
-      // Agregar el evento de clic en toda la tarjeta
       dessertDiv.addEventListener("click", () => {
         toggleContent(dessertDiv, item);
       });
@@ -141,6 +138,17 @@ function toggleContent(productDiv, item) {
 
 loadMenu();
 
+// Función para restablecer los elementos a su estado inicial
+function resetHiddenElements() {
+  document.querySelectorAll(".menu-image, .menu-description").forEach((el) => {
+    el.classList.remove("hidden");
+  });
+  document.querySelectorAll(".allergens, .video").forEach((el) => {
+    el.classList.add("hidden");
+  });
+}
+
 document.getElementById("print-btn").addEventListener("click", () => {
+  resetHiddenElements();
   window.print();
 });

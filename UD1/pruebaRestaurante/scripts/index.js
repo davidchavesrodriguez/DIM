@@ -29,6 +29,11 @@ document.getElementById("linkLegal").onclick = function (event) {
     text: "Este sitio web es propiedad de Celtic Heritage. Todos los derechos reservados. El uso de este sitio implica la aceptación de nuestros términos y condiciones. Si tienes dudas, puedes contactar con nosotros a través de la sección de contacto.",
     icon: "warning",
     confirmButtonText: "Ok",
+    background: "#235bb5",
+    color: "white",
+    customClass: {
+      popup: "sweetalert-border",
+    },
   });
 };
 
@@ -40,6 +45,11 @@ document.getElementById("linkPolitica").onclick = function (event) {
     text: "En Celtic Heritage, valoramos tu privacidad. Recopilamos datos personales para mejorar tu experiencia en nuestro sitio. Utilizamos cookies para analizar el tráfico y personalizar el contenido. Puedes gestionar tus preferencias en cualquier momento.",
     icon: "info",
     confirmButtonText: "Ok",
+    background: "#235bb5",
+    color: "white",
+    customClass: {
+      popup: "sweetalert-border",
+    },
   });
 };
 
@@ -66,6 +76,11 @@ document.getElementById("linkArea").onclick = function (event) {
     showCancelButton: true,
     confirmButtonText: "Entrar",
     cancelButtonText: "Cerrar",
+    background: "#235bb5",
+    color: "white",
+    customClass: {
+      popup: "sweetalert-border",
+    },
     preConfirm: () => {
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;

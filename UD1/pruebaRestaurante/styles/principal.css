@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
+
 :root {
   --main-color: #235bb5;
   --accent-color: #d9a626;
@@ -10,6 +12,7 @@
 /* SECTION */
 html {
   background-color: black;
+  font-family: "Faculty Glyphic", sans-serif;
 }
 
 #sectionPrincipal {
