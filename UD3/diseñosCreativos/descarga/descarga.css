@@ -46,3 +46,9 @@ button:active {
   border-color: #af0a78;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
 }
+
+#timer {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 20px;
+}
