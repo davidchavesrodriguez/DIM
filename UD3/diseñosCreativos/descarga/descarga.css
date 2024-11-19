@@ -1,39 +1,59 @@
-/* Asegúrate de que el body tiene flexbox solo para centrar el contenido */
 body {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   position: relative;
+  background: linear-gradient(135deg, #f0f0f0, #e4e4e4);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Estilo para el header centrado */
 header {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  padding: 0.5rem;
-  background-color: #e0e0e0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  background-color: #a8d0e6;
+  color: black;
   text-align: center;
-  margin-bottom: 2rem;
-  width: 100%;
+  margin-bottom: 3rem;
+  width: 80%;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Estilo para el botón que se moverá aleatoriamente */
+header.blink-red {
+  background-color: #f28d8d;
+  transform: scale(1.05);
+}
+
+header.blink-yellow {
+  background-color: #f9d67e;
+  transform: scale(1.05);
+}
+
 button {
   font: inherit;
-  border: 1px solid #88005b;
-  background-color: #88005b;
+  border: 2px solid #6fa3ef;
+  background-color: #6fa3ef;
   color: white;
-  padding: 1rem 2rem;
-  border-radius: 12px;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
   margin: 1rem;
-  width: 12rem;
+  width: 15rem;
   cursor: pointer;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
   position: absolute;
-  transition: top 0.3s, left 0.3s;
   top: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+  pointer-events: all;
+  transition: all 0.3s ease-in-out;
+}
+
+button.move {
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
 }
 
 button:focus {
@@ -42,13 +62,52 @@ button:focus {
 
 button:hover,
 button:active {
-  background-color: #af0a78;
-  border-color: #af0a78;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
+  background-color: #48cfae;
+  border-color: #48cfae;
+  transform: scale(1.05);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
 }
 
 #timer {
-  font-size: 2em;
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
   text-align: center;
   margin-top: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#timer.warning {
+  color: black;
+  transform: scale(1.5);
+  animation: pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#timer.success {
+  color: #66bb6a;
+}
+
+#counter {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.hidden {
+  display: none;
 }
